@@ -1,0 +1,14 @@
+ca:
+  image:
+    repository: hyperledger/fabric-ca
+    tag: 1.5.3
+
+orderer:
+  image:
+    repository: hyperledger/fabric-orderer
+    tag: 2.4.7
+
+peer:
+  image:
+    repository: hyperledger/fabric-peer
+    tag: 2.4.7

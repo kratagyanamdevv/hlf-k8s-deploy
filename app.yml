@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hlf-network
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: 'https://github.com/yourusername/hlf-k8s-deploy'
+    targetRevision: HEAD
+    path: hlf
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: hlf-network
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

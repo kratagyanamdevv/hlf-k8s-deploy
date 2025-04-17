@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/yourusername/hlf-k8s-deploy'
+    repoURL: 'https://github.com/kratagyanamdevv/hlf-k8s-deploy'
     targetRevision: HEAD
     path: hlf
     helm:
       valueFiles:
-        - values.yaml
+        - values.yml
   destination:
     server: 'https://kubernetes.default.svc'
     namespace: hlf-network
